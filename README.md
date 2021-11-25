@@ -2,7 +2,7 @@
 
 ## Depois que estiver com toda a sua estrutura montada (migrations, model, api, controller), no seu arquivo de controller, crie uma function da seguinte forma.
 
-
+```
 
 <?php
 
@@ -20,6 +20,8 @@ public function countValortotal(Request $request)
         return $this->getResponseJson([], 'error', $exception->getMessage(), [], Response::HTTP_INTERNAL_SERVER_ERROR);
     }
 }
+
+```
 
 
 # Nesse exemplo podemos ver que primeiro, se usa o helper DB instanciando a tabela que vamos usar ("pedidos") o where estou usando para filtrar pedidos que tenham apenas o 'status_venda' = 'Vendido', e em seguida uso o ->sum (É uma método que faz a soma de todos os valores de uma coluna, no caso a "price").
