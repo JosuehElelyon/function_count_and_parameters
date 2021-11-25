@@ -6,13 +6,6 @@
 
 <?php
 
-namespace App\Http\Controllers\Controller;
-
-use App\Http\Controllers\Controller;
-
-
-class Controller extends Controller
-{
 
 public function countValortotal(Request $request)
 {
@@ -27,11 +20,6 @@ public function countValortotal(Request $request)
         return $this->getResponseJson([], 'error', $exception->getMessage(), [], Response::HTTP_INTERNAL_SERVER_ERROR);
     }
 }
-
-}
-
-
-
 
 
 # Nesse exemplo podemos ver que primeiro, se usa o helper DB instanciando a tabela que vamos usar ("pedidos") o where estou usando para filtrar pedidos que tenham apenas o 'status_venda' = 'Vendido', e em seguida uso o ->sum (É uma método que faz a soma de todos os valores de uma coluna, no caso a "price").
